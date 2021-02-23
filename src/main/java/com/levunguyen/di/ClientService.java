@@ -8,11 +8,11 @@ public class ClientService {
     private EmailService emailService;
 
     @Autowired
-    public ClientService(EmailService emailService) {
+    public void setEmailService(EmailService emailService) {
         this.emailService = emailService;
     }
 
-    public void processMsg(String message){
+    public void processMsg(String message) {
         emailService.sendMsg(message);
     }
 }
